@@ -88,7 +88,7 @@ class CalculatorModal(discord.ui.Modal, title='XP & Pack Calculator'):
         MINI_XP = 125_000
         SMALL_XP = 250_000
         MEDIANT_XP = 500_000
-        VAST_XP = 1_000_000
+        VAST_XP = 1_100_000
 
         remaining = total_xp
 
