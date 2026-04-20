@@ -17,9 +17,9 @@ ALLOWED_CATEGORY_ID = 1487387217017045134  # ⬅️ REPLACE THIS
 # ==========================================
 app = Flask('')
 
-@app.route('/')
+@app.route("/")
 def home():
-    return "Bot is alive!"
+    return "Bot is running!"
 
 def run():
     port = int(os.environ.get("PORT", 10000))
