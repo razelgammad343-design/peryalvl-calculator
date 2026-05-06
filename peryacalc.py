@@ -134,18 +134,21 @@ class CalculatorModal(discord.ui.Modal, title='XP & Pack Calculator'):
         embed.add_field(name="📊 Levels", value=f"{start} ➜ {target}", inline=False)
         embed.add_field(name="📈 Total XP Needed", value=f"{total_xp:,}", inline=False)
 
+        # your custom emoji
+        emoji = "<:dl:1495834832524021962>"
+
         packs_text = ""
         if vast:
-            packs_text += f"📦 {vast}x Vast Pack (65💎)\n"
+            packs_text += f"{emoji} {vast}x Vast Pack (65)\n"
         if mediant:
-            packs_text += f"📦 {mediant}x Mediant Pack (40💎)\n"
+            packs_text += f"{emoji} {mediant}x Mediant Pack (40{emoji})\n"
         if small:
-            packs_text += f"📦 {small}x Small Pack (28💎)\n"
+            packs_text += f"{emoji} {small}x Small Pack (28{emoji})\n"
         if mini:
-            packs_text += f"📦 {mini}x Mini Pack (15💎)\n"
+            packs_text += f"{emoji} {mini}x Mini Pack (15{emoji})\n"
 
         embed.add_field(name="📦 Recommended Packs", value=packs_text or "None", inline=False)
-        embed.add_field(name="💰 Total Cost", value=f"{total_dl} 💎 Diamond Locks", inline=False)
+        embed.add_field(name="💰 Total Cost", value=f"{total_dl} {emoji} Diamond Locks", inline=False)
         embed.add_field(name="⏱️ Estimated Time", value=f"{hours}h {minutes}m", inline=False)
 
         await interaction.response.send_message(embed=embed)
